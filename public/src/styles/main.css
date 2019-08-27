@@ -1,0 +1,87 @@
+.header {
+    background: #eee;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-family: 'Titillium Web', sans-serif;
+    color: #254e7b;
+
+}
+
+header p {
+    font-size: 1.6em;
+    margin-top: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #85c1e5;
+    font-weight: bolder;
+}
+
+body {
+    background: rgb(187, 187, 187);
+}
+
+main {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.input-container {
+    display: flex;
+    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.05em;
+}
+
+input {
+    width: 280px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 15px;
+    font-size: 1.02em;
+}
+
+.section-container {
+    background: whitesmoke;
+    padding: 25px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 500px;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.item-header {
+    flex-grow: 1;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.05em;
+
+}
+
+button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.02em;
+}
+
+.complete-button {
+    background: rgb(141, 187, 141);
+    color: white;
+}
+
+.delete-button {
+    background: rgb(192, 131, 131);
+    color: white;
+    margin-left: 5px;
+}
