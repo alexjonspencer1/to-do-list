@@ -101,7 +101,7 @@ button {
     margin-left: 5px;
 }
 
-.completed {
+.complete {
     text-decoration: line-through;
 }
 

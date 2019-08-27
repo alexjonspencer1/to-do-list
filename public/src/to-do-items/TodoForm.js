@@ -33,7 +33,7 @@ class TodoForm extends Component {
             <section class="input-form-section">
                 <form class="section-container">
                     <div class="input-container">
-                        Add your new to-do list item <input class="input" placeholder="Put a new task here!">
+                        Add your new to-do list item <input class="input" maxlength="60" placeholder="Put a new task here!">
                         <button class="add-button">Add</button>
                     </div>
                     <p class="error"></p>

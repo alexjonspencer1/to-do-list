@@ -19,9 +19,7 @@ class App extends Component {
                         const todos = this.state.todos;
                         todos.push(saved);
                         todoList.update({ todos });
-                    });
-                    
-
+                    });    
             }
 
         });
