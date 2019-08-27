@@ -104,3 +104,10 @@ button {
 .completed {
     text-decoration: line-through;
 }
+
+.error {
+    font-family: monospace;
+    color: darkred;
+    text-align: center;
+    margin-top: 15px;
+}
