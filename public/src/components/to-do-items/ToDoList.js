@@ -1,4 +1,4 @@
-import Component from '../components/Component.js';
+import Component from '../Component.js';
 import Todo from '../to-do-items/Todo.js';
 
 class ToDoList extends Component {

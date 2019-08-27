@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from './Header.js';
-import ToDoForm from '../../to-do-items/TodoForm.js';
-import ToDoList from '../../to-do-items/ToDoList.js';
+import ToDoForm from '../to-do-items/TodoForm.js';
+import ToDoList from '../to-do-items/ToDoList.js';
 import { getTodos, addTodo, updateTodo, removeTodo } from '../../services/todo-api.js';
 
 class App extends Component {

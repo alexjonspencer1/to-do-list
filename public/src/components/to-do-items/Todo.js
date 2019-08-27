@@ -1,4 +1,4 @@
-import Component from '../components/Component.js';
+import Component from '../Component.js';
 
 class Todo extends Component {
 
