@@ -40,6 +40,7 @@ app.get('/api/todos', (req, res) => {
 
 app.post('/api/todos', (req, res) => {
     const todo = req.body;
+    console.log(req.body);
     client.query(`
         INSERT INTO todos (name)
         VALUES ($1)
