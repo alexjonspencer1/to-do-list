@@ -75,6 +75,12 @@ button {
     font-size: 1.02em;
 }
 
+.add-button {
+    margin-left: 10px;
+    background: darkgray;
+    color: white;
+}
+
 .complete-button {
     background: rgb(141, 187, 141);
     color: white;
