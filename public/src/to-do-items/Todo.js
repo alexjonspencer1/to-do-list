@@ -18,7 +18,7 @@ class Todo extends Component {
             if(confirm(`Are you sure this item is complete? No half-assed efforts!`)) {
                 onRemove(todo);
             }
-        })
+        });
     }
 
 

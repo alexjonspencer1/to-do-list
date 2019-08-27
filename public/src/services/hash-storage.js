@@ -1,4 +1,4 @@
-import QUERY from './QUERY.js';
+import QUERY from '../services/QUERY.js';
 
 const hashStorage = {
     get() {
