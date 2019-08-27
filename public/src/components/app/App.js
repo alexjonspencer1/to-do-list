@@ -58,6 +58,7 @@ class App extends Component {
                 todoList.update({ todos });
             })
             .catch(err => {
+                // eslint-disable-next-line no-console
                 console.log(err);
             });
     }
