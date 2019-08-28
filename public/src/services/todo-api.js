@@ -1,5 +1,14 @@
-const URL = '/api';
+// import store from './store.js';
 
+// const token = store.getToken();
+// if(!token && location.pathname !== '/auth.html') {
+    
+    // }
+    
+    // DON'T THINK WE NEED THE ABOVE.....
+
+const URL = '/api';
+    
 function fetchWithError(url, options) {
     return fetch(url, options)
         .then(response => {
@@ -46,5 +55,27 @@ export function removeTodo(id) {
     const url = `${URL}/todos/${id}`;
     return fetchWithError(url, {
         method: 'DELETE'
+    });
+}
+
+export function userSignUp(user) {
+    const url = `${URL}/auth/signup`;
+    return fetchWithError(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+    });
+}
+
+export function userSignIn(credentials) {
+    const url = `${URL}/auth/signin`;
+    return fetchWithError(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials)
     });
 }

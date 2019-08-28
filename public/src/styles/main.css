@@ -11,7 +11,6 @@ header h1 {
     font-size: 3.5em;
     font-family: 'Titillium Web', sans-serif;
     color: #254e7b;
-
 }
 
 header p {
@@ -38,7 +37,6 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 1.05em;
-    /* margin-bottom: 35px; */
 }
 
 input {
@@ -76,7 +74,6 @@ ul {
     flex-grow: 1;
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.05em;
-
 }
 
 button {
@@ -112,6 +109,24 @@ button {
     margin-top: 15px;
 }
 
+.switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form p {
+    text-align: center;
+}
+
+.errors {
+    font-family: monospace;
+    color: red;
+}
+
+.no-display {
+    display: none;
+}
+
 @media only screen and (max-width: 650px) {
     .input-container {
         display: flex;
@@ -131,10 +146,6 @@ button {
 
     main {
         width: 90%;
-    }
-
-    .section-container {
-        /* width: 350px; */
     }
     
   }
