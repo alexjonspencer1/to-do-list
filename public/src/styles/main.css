@@ -120,10 +120,14 @@ form p {
 
 .errors {
     font-family: monospace;
-    color: red;
+    color: darkred;
 }
 
 .no-display {
+    display: none;
+}
+
+.hidden {
     display: none;
 }
 

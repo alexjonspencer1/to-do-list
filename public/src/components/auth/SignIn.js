@@ -14,7 +14,6 @@ class SignIn extends Component {
                 email: formData.get('email'),
                 password: formData.get('password')
             };
-
             onSignIn(credentials);
         });
     }

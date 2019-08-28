@@ -1,15 +1,20 @@
-// import store from './store.js';
-
-// const token = store.getToken();
-// if(!token && location.pathname !== '/auth.html') {
-    
-    // }
-    
-    // DON'T THINK WE NEED THE ABOVE.....
+import store from './store.js';
 
 const URL = '/api';
+
+const token = store.getToken();
+if(!token && location.pathname !== '/auth.html') {
+    const searchParams = new URLSearchParams();
+    searchParams.set('redirect', location.pathname);
+    location = `auth.html?${searchParams.toString()}`;
+}
     
 function fetchWithError(url, options) {
+    if(token) {
+        options = options || {};
+        options.headers = options.headers || {};
+        options.headers.Authorization = token;
+    }
     return fetch(url, options)
         .then(response => {
             if(response.ok) {
