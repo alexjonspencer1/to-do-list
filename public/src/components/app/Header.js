@@ -9,7 +9,7 @@ class Header extends Component {
         logoutButton.addEventListener('click', () => {
             store.removeToken();
             window.location = 'auth.html';
-        })
+        });
     }
 
     renderHTML() {
