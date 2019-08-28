@@ -39,7 +39,7 @@ main {
     font-size: 1.05em;
 }
 
-input {
+.input-todo {
     width: 280px;
     font-family: 'Titillium Web', sans-serif;
     margin-left: 15px;
@@ -111,16 +111,45 @@ button {
 
 .switch {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-form p {
-    text-align: center;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid gray;
+    max-width: 330px;
+    height: auto;
+    background: white;
+    padding: 25px 35px 25px 35px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+label {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.sign-in-button, .sign-up-button {
+    margin-top: 10px;
+}
+
+#signin-email, #signin-password, #name, #email, #password {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.05em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
 }
 
 .errors {
     font-family: monospace;
     color: darkred;
+    text-align: center;
+    margin-top: 25px;
+    /* margin-bottom: -25px; */
+
 }
 
 .no-display {
@@ -140,7 +169,7 @@ form p {
         /* width: 350px; */
     }
 
-    input {
+    .input-todo {
         margin-top: 15px;
     }
 
