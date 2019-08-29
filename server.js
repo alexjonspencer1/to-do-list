@@ -48,8 +48,6 @@ app.use('/api', ensureAuth);
 
 
 app.get('/api/todos', (req, res) => {
-    const showAll = (req.query.show && req.query.show.toLowerCase() === 'all');
-    const where = showAll ? '' : 'WHERE complete = FALSE';
 
     client.query(`
         SELECT 
@@ -57,9 +55,11 @@ app.get('/api/todos', (req, res) => {
             name,
             complete
         FROM todos
-        ${where} 
+        WHERE user_id = $1
         ORDER BY name;
-    `)
+    `,
+    [req.userId]
+    )
         .then(result => {
             res.json(result.rows);
         })
@@ -74,11 +74,11 @@ app.post('/api/todos', (req, res) => {
     const todo = req.body;
 
     client.query(`
-        INSERT INTO todos (name)
-        VALUES ($1)
+        INSERT INTO todos (name, user_id)
+        VALUES ($1, $2)
         RETURNING *;
     `,
-    [todo.name]
+    [todo.name, req.userId]
     )
         .then(result => {
             res.json(result.rows[0]);
@@ -104,9 +104,10 @@ app.put('/api/todos/:id', (req, res) => {
         SET     name = $2,
                 complete = $3
         WHERE   id = $1
+        AND     user_id = $4
         RETURNING *;
     `,
-    [id, todo.name, todo.complete]
+    [id, todo.name, todo.complete, req.userId]
     )
         .then(result => {
             res.json(result.rows[0]);
@@ -129,9 +130,10 @@ app.delete('/api/todos/:id', (req, res) => {
     client.query(`
         DELETE FROM todos
         WHERE id = $1
+        AND user_id = $2
         RETURNING *;
     `,
-    [id]
+    [id, req.userId]
     )
         .then(result => {
             res.json(result.rows[0]);
