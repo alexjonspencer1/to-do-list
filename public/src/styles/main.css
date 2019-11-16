@@ -1,0 +1,189 @@
+.header {
+    background: #eee;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-family: 'Titillium Web', sans-serif;
+    color: #254e7b;
+}
+
+header p {
+    font-size: 1.6em;
+    margin-top: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #85c1e5;
+    font-weight: bolder;
+}
+
+body {
+    background: rgb(187, 187, 187);
+}
+
+main {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.input-container {
+    display: flex;
+    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.05em;
+}
+
+.input-todo {
+    width: 280px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 15px;
+    font-size: 1.02em;
+}
+
+.section-container {
+    background: whitesmoke;
+    padding: 15px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 650px;
+}
+
+ul {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item-header {
+    flex-grow: 1;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.05em;
+}
+
+button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.02em;
+}
+
+.add-button {
+    margin-left: 10px;
+    background: darkgray;
+    color: white;
+}
+
+.complete-button {
+    background: rgb(141, 187, 141);
+    color: white;
+}
+
+.delete-button {
+    background: rgb(192, 131, 131);
+    color: white;
+    margin-left: 5px;
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+.error {
+    font-family: monospace;
+    color: darkred;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.switch {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid gray;
+    max-width: 330px;
+    height: auto;
+    background: white;
+    padding: 25px 35px 25px 35px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+label {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.sign-in-button, .sign-up-button {
+    margin-top: 10px;
+}
+
+#signin-email, #signin-password, #name, #email, #password {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.05em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.errors {
+    font-family: monospace;
+    color: darkred;
+    text-align: center;
+    margin-top: 25px;
+    /* margin-bottom: -25px; */
+
+}
+
+#log-out {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.no-display {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin: auto;
+        /* width: 350px; */
+    }
+
+    .input-todo {
+        margin-top: 15px;
+    }
+
+    .add-button {
+        margin-top: 15px;
+    }
+
+    main {
+        width: 90%;
+    }
+    
+  }
